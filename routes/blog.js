@@ -1,5 +1,7 @@
 const express = require('express');
-const router = express.Route();
+// Incorrect import of router
+// const router = express.Route();
+const router = express.Router();
 const Blog = require('../models/Blog');
 const {
   getAllBlogs,
@@ -24,4 +26,6 @@ router.put('/blog/:id', updateBlog);
 
 router.delete('/blog/:id', deleteBlog);
 
-module.exports = route;
+// Incorrect export of router
+// module.exports = route;
+module.exports = router;

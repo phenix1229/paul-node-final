@@ -7,4 +7,6 @@ const BlogSchema = new mongoose.Schema({
   article: { type: String, default: '' },
 });
 
-module.exports = Blog;
+// Incorrect export
+// module.exports = Blog;
+module.exports = mongoose.model('Blog', BlogSchema);
